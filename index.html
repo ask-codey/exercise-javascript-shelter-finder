@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visit Us | Riverbend Animal Shelter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p class="shelter-name">Riverbend Animal Shelter</p>
+    <h1>Visit Us</h1>
+    <p class="tagline">Three shelters, one goal: a home for every pet.</p>
+  </header>
+
+  <main>
+    <section id="find" aria-labelledby="find-heading">
+      <h2 id="find-heading">Find your nearest shelter</h2>
+      <p>We'll ask your browser where you are, only to find the shelter closest to you. Nothing is saved.</p>
+      <button id="find-me" type="button">Find my nearest shelter</button>
+      <p id="find-message" role="status"></p>
+      <ul id="shelter-list" hidden>
+        <li><strong>Riverbend Main Shelter</strong>, 1200 River Road</li>
+        <li><strong>Eastside Adoption Center</strong>, 88 Eastside Avenue</li>
+        <li><strong>Northgate Pet Rescue</strong>, 450 Northgate Boulevard</li>
+      </ul>
+    </section>
+
+    <section id="year" aria-labelledby="year-heading">
+      <h2 id="year-heading">Our year so far</h2>
+      <p id="chart-message" role="status">Loading the chart...</p>
+      <div id="adoptions-chart"></div>
+      <table>
+        <caption>Dogs and cats adopted, January to June</caption>
+        <thead>
+          <tr><th scope="col">Month</th><th scope="col">Dogs</th><th scope="col">Cats</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Jan</th><td>7</td><td>5</td></tr>
+          <tr><th scope="row">Feb</th><td>5</td><td>4</td></tr>
+          <tr><th scope="row">Mar</th><td>9</td><td>6</td></tr>
+          <tr><th scope="row">Apr</th><td>10</td><td>8</td></tr>
+          <tr><th scope="row">May</th><td>12</td><td>10</td></tr>
+          <tr><th scope="row">Jun</th><td>15</td><td>12</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="hours-section" aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Opening hours</h2>
+      <button id="hours-toggle" type="button" aria-expanded="false" aria-controls="hours">Show opening hours</button>
+      <div id="hours" class="hidden">
+        <p>Tuesday to Friday: 11 a.m. to 6 p.m.</p>
+        <p>Saturday and Sunday: 10 a.m. to 4 p.m.</p>
+        <p>Closed on Mondays.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Charts drawn with Google Charts.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
